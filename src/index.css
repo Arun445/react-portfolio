@@ -1,13 +1,98 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin-top: 100px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+p {
+  padding-top: 50px;
+}
+
+.Navbar {
+  height: 100px;
+  margin-bottom: 100px;
+}
+
+.navbar-inner {
+  background: transparent;
+}
+
+.background-image {
+  background-image: url("./bg-index.jpg");
+  margin-bottom: 50px;
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+.background-image1 {
+  background-image: url("./36659662.jpg");
+
+  background-size: 300px 150px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
+}
+
+.Row {
+  border-style: dotted;
+}
+main {
+  min-height: 80vh;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+.Navbar {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%);
+}
+
+.btn-center {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.product-image {
+  height: 200px;
+  width: 200px;
+}
+.cart-image {
+  height: 120px;
+  width: 120px;
+}
+.google-btn-center {
+  width: auto;
+  margin-left: 28%;
+  margin-right: auto;
+}
+
+.google-btn {
+  display: block;
+  height: 45px;
+}
+
+.biggerRadioButton {
+  transform: scale(2);
 }
