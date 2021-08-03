@@ -1,6 +1,9 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import SearchBox from "./components/SearchBox";
 import {
   Row,
@@ -16,13 +19,11 @@ import logo from "./36659662.jpg";
 function App() {
   return (
     <div>
-      <Navbar expand="lg" className=" Navbar background-image ">
-        <Container>
-          <Navbar.Brand href="#home">PORTFOLIO</Navbar.Brand>
-          <Nav.Link>Home</Nav.Link>
-          <Nav.Link>Link</Nav.Link>
-        </Container>
-      </Navbar>
+      <NavBar />
+      <Home />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }
