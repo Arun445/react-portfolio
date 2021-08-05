@@ -25,6 +25,7 @@ p {
 .Navbar {
   height: 100px;
   margin-bottom: 100px;
+  position: fixed;
 }
 
 .navbar-inner {
@@ -49,8 +50,8 @@ p {
 }
 
 .Navbar-text {
-  color: black;
-  font-size: 150%;
+  color: black !important;
+  font-size: 150% !important;
 }
 
 .CoralColor-start {
@@ -58,7 +59,7 @@ p {
 }
 .CoralColor {
   background-color: #c7d3d4ff;
-  min-height: 500px;
+  min-height: 1000px;
 }
 
 .check {
@@ -74,6 +75,10 @@ p {
   border-left: 2px solid #603f83ff;
   border-bottom: 2px solid #603f83ff;
 }
+.check-purple-light {
+  border-left: 2px solid #6e00ff;
+  border-bottom: 2px solid #6e00ff;
+}
 
 .check-grey {
   border-left: 2px solid #c7d3d4ff;
@@ -82,6 +87,10 @@ p {
 .check-grey-r {
   border-top: 2px solid #c7d3d4ff;
   border-right: 2px solid #c7d3d4ff;
+}
+.check-purple-r {
+  border-top: 2px solid #6e00ff;
+  border-right: 2px solid #6e00ff;
 }
 
 .card-bg {
@@ -118,10 +127,10 @@ p {
 }
 
 .Name-border {
-  border: 2px solid #00f7ff;
+  border: 3px solid #00f7ff;
 }
 .Name-border-1 {
-  border: 2px solid #603f83ff;
+  border: 3px solid #603f83ff;
 }
 
 .footer {
@@ -142,4 +151,41 @@ p {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 1rem;
+}
+
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  opacity: 0.75;
+}
+
+.scrolled-top {
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.pt-10 {
+  padding-top: 150px;
+}
+
+.text-lblue {
+  color: #00f7ff;
+}
+
+.text-purpl {
+  color: #6e00ff;
+}
+
+.card-background {
+  background-color: #c7d3d4ff !important;
+  border: 1px solid #c7d3d4ff !important;
+}
+.card-background-image {
+  border-bottom: 2px solid #00f7ff !important;
+  border-left: 2px solid #00f7ff !important;
 }

@@ -1,18 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Container,
-  Col,
-  Row,
-  Form,
-  Button,
-  Card,
-  Table,
-} from "react-bootstrap";
+import { Container, Col, Row, Form, Button, Table } from "react-bootstrap";
 function Contact() {
   return (
     <div className="pt-4 pb-5">
-      <Container>
+      <Container id="Contacts">
         <Row className="check-purple  mb-5">
           <Col lg={4} className="">
             <h2 className="p-1 check-lblue">Contacts</h2>
@@ -40,7 +31,7 @@ function Contact() {
                     >
                       <i
                         className="fab fa-linkedin fa-lg"
-                        style={{ color: "blue" }}
+                        style={{ color: "#2867B2" }}
                       ></i>
                     </a>
                   </td>
@@ -51,6 +42,17 @@ function Contact() {
                     <a href={"https://github.com/Arun445"} target="_blank">
                       <i
                         className="fab fa-github fa-lg"
+                        style={{ color: "black" }}
+                      ></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-4">
+                    <strong>Resume</strong>:{" "}
+                    <a href={"https://github.com/Arun445"} target="_blank">
+                      <i
+                        className="far fa-file fa-lg"
                         style={{ color: "black" }}
                       ></i>
                     </a>
