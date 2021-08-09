@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 import projects from "../projects.js";
@@ -8,6 +8,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
+  const [onHover, setOnHover] = useState("");
+  const [h, setH] = useState(0);
+
   const revealRefs = useRef([]);
   const currentRefs = (revealRefs.current = []);
 
@@ -18,25 +21,33 @@ function Projects() {
   };
 
   useEffect(() => {
-    currentRefs.forEach((ref, index) => {
-      gsap.fromTo(
-        ref,
-        { autoAlpha: 0 },
-        {
-          duration: 1,
-          autoAlpha: 1,
-          ease: 0,
-          scrollTrigger: {
-            id: `section-${index + 1}`,
-            trigger: ref,
-            start: "top center +=100",
-            toggleActions: "play none none",
-          },
-        }
-      );
-    });
-  }, []);
+    console.log("ayy");
+    if (h === 0) {
+      setH(1);
+      currentRefs.forEach((ref, index) => {
+        gsap.fromTo(
+          ref,
+          { autoAlpha: 0 },
+          {
+            duration: 1,
+            autoAlpha: 1,
+            ease: 0,
+            scrollTrigger: {
+              id: `section-${index + 1}`,
+              trigger: ref,
+              start: "top center +=100",
+              toggleActions: "play none none",
+            },
+          }
+        );
+      });
+    }
+  });
 
+  const changeImageOnHover = (title) => {
+    setOnHover(title);
+    console.log("a");
+  };
   return (
     <div className="CoralColor  pt-5 pb-5" id="Projects">
       <Container className=" ">
@@ -46,7 +57,7 @@ function Projects() {
           </Col>
         </Row>
         {projects.map(({ title, subtitle, cardText, image }) => (
-          <Row className="pt-5 " ref={addToRefs}>
+          <Row className="pt-5 " ref={addToRefs} key={title}>
             <Col
               xm={10}
               md={6}
@@ -72,8 +83,40 @@ function Projects() {
               </Card>
             </Col>
             <Col xm={10} md={6} lg={12} xl={6} className="p-1 ">
-              <Card className="">
-                <Card.Img variant="top" src={image} />
+              <Card className="" onMouseOver={() => changeImageOnHover(title)}>
+                {onHover === title ? (
+                  <div>
+                    <Card.Img
+                      variant="top"
+                      src={image}
+                      className="onHoverBlur"
+                    />
+                    <a
+                      href={"https://github.com/Arun445"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="first-txt"
+                    >
+                      <i
+                        className="fab fa-github fa-2x"
+                        style={{ color: "white" }}
+                      ></i>
+                    </a>
+                    <a
+                      href={"https://github.com/Arun445"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="second-txt"
+                    >
+                      <i
+                        className="fas fa-globe-europe fa-2x"
+                        style={{ color: "white" }}
+                      ></i>
+                    </a>
+                  </div>
+                ) : (
+                  <Card.Img variant="top" src={image} />
+                )}
               </Card>
             </Col>
           </Row>

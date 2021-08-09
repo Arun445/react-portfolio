@@ -29,47 +29,56 @@ function NavBar() {
     }
   });
 
-  const headerRef = useRef(null);
+  const nameRef = useRef(null);
+  const developerRef = useRef(null);
 
   useEffect(() => {
-    gsap.from(headerRef.current, {
+    gsap.from(nameRef.current, {
       duration: 1,
       autoAlpha: 0,
       ease: "none",
       delay: 1,
     });
-  }, [headerRef]);
+    gsap.from(developerRef.current, {
+      duration: 1,
+      autoAlpha: 0,
+      ease: "none",
+      delay: 2,
+    });
+  });
 
   return (
     <div id="Home">
       <Navbar expand="lg" fixed="top" className=" autohide ">
         <Container className="Row d-flex justify-content-center " fluid>
           <Nav.Link href={"#Home"}>
-            <text className="Navbar-text">Home</text>
+            <h2 className="Navbar-text">Home</h2>
           </Nav.Link>
           <Nav.Link href="#About">
-            <text className="Navbar-text">About</text>
+            <h2 className="Navbar-text">About</h2>
           </Nav.Link>
           <Nav.Link href="#Projects">
-            <text className="Navbar-text">Projects</text>
+            <h2 className="Navbar-text">Projects</h2>
           </Nav.Link>
           <Nav.Link href="#Contacts">
-            <text className="Navbar-text">Contact</text>
+            <h2 className="Navbar-text">Contact</h2>
           </Nav.Link>
         </Container>
       </Navbar>
       <div className=" background-image  ">
-        <Container className="pt-10" ref={headerRef}>
+        <Container className="pt-10">
           <Row>
             <Col className="Row d-flex justify-content-center ">
-              <h1 className="h1-up Name-border p-1 text-center">
+              <h1 className="h1-up Name-border p-1 text-center" ref={nameRef}>
                 Arūnas Martinaitis
               </h1>
             </Col>
           </Row>
           <Row>
             <Col className="Row d-flex justify-content-center">
-              <h1 className="Name-border-1 p-1">Web Developer</h1>
+              <h1 className="Name-border-1 p-1" ref={developerRef}>
+                Web Developer
+              </h1>
             </Col>
           </Row>
         </Container>

@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-* {
+body {
   font-family: "Montserrat", sans-serif;
 }
 
 .h1-up {
+  color: white;
   font-size: 300%;
 }
 
@@ -19,7 +20,7 @@ p {
 }
 
 .text-color-lblue {
-  color: #00f7ff;
+  color: #3ee8ee;
 }
 
 .Navbar {
@@ -33,7 +34,7 @@ p {
 }
 
 .background-image {
-  background-image: url("./asd.jpg");
+  background-color: #041e42;
   margin-bottom: 50px;
 
   min-height: 700px;
@@ -50,7 +51,7 @@ p {
 }
 
 .Navbar-text {
-  color: black !important;
+  color: white !important;
   font-size: 150% !important;
 }
 
@@ -68,7 +69,7 @@ p {
 }
 .check-lblue {
   border-left: 2px solid #00f7ff;
-  border-bottom: 2px solid #00f7ff;
+  border-right: 2px solid #00f7ff;
 }
 
 .check-purple {
@@ -77,7 +78,7 @@ p {
 }
 .check-purple-light {
   border-left: 2px solid #6e00ff;
-  border-bottom: 2px solid #6e00ff;
+  border-right: 2px solid #6e00ff;
 }
 
 .check-grey {
@@ -118,19 +119,12 @@ p {
   height: 400px;
 }
 
-.yep {
-  color: red;
-}
-
-.yep:hover {
-  filter: brightness(50%);
-}
-
 .Name-border {
-  border: 3px solid #00f7ff;
+  border: 3px solid #afeadc;
 }
 .Name-border-1 {
-  border: 3px solid #603f83ff;
+  color: white;
+  border: 3px solid #6e00ff;
 }
 
 .footer {
@@ -188,4 +182,35 @@ p {
 .card-background-image {
   border-bottom: 2px solid #00f7ff !important;
   border-left: 2px solid #00f7ff !important;
+}
+
+.title {
+  background-image: url("./todoapp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 320px;
+}
+.onHoverBlur {
+  transition: all 0.3s ease-in-out !important;
+  background-color: rgb(255, 255, 255, 0.5);
+  filter: blur(2px) brightness(0.5);
+}
+
+.first-txt {
+  transition: all 0.3s ease-in-out !important;
+
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.second-txt {
+  transition: all 0.3s ease-in-out !important;
+
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }

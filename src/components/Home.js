@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import { gsap } from "gsap";
 import logo from "../36659662.jpg";
@@ -26,8 +26,10 @@ function Home() {
   }, [headerRef]);
   return (
     <Container className="mb-5 " id="About">
-      <Row>
-        <Col md={12}></Col>
+      <Row className=" pb-4">
+        <Col className="check-purple-light">
+          <h1 className="check-lblue p-1">About</h1>
+        </Col>
       </Row>
       <Row className="">
         <Col className="Row d-flex justify-content-center ">
@@ -38,13 +40,13 @@ function Home() {
         <Col className=" d-flex  align-items-center  check">
           <div className="mt-5 p-1 text-center">
             <strong>
-              Labas, aš esu Arūnas Martinaitis ir esu{" "}
-              <strong className="text-color-lblue">backend developeris</strong>.
-              Savo projektuose pagrinde naudoju{" "}
+              Hello, my name is Arūnas Martinaitis and i am a{" "}
+              <strong className="text-color-lblue">backend developer</strong>.
+              In my projects i mainly use{" "}
               <strong className="text-color-lblue">Python-Django</strong>{" "}
-              framework. Tačiau taip pat turiu patirties naudojant,{" "}
-              <strong className="text-color-lblue">React-Redux </strong>{" "}
-              frontende.
+              framework. Also i have experience working with ,{" "}
+              <strong className="text-color-lblue">React-Redux </strong> on the
+              frontend.
             </strong>
             <p className=" text-center card-bg mt-4 p-1">
               Python, Javascript, React, Django, Git,
