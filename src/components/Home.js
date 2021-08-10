@@ -25,7 +25,7 @@ function Home() {
     });
   }, [headerRef]);
   return (
-    <Container className="mb-5 " id="About">
+    <Container className="p-5 " id="About">
       <Row className=" pb-4">
         <Col className="check-purple-light">
           <h1 className="check-lblue p-1">About</h1>

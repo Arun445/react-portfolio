@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
+:root {
+  --first-color: #de6a5b;
+  --second-color: #000000;
+  --third-color: #6aa0af;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -20,7 +26,7 @@ p {
 }
 
 .text-color-lblue {
-  color: #3ee8ee;
+  color: var(--first-color);
 }
 
 .Navbar {
@@ -34,8 +40,7 @@ p {
 }
 
 .background-image {
-  background-color: #041e42;
-  margin-bottom: 50px;
+  background: url("./Group\ 1.png");
 
   min-height: 700px;
 
@@ -46,7 +51,6 @@ p {
 
   /* Needed to position the navbar */
   position: relative;
-  filter: brightness(70%);
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%);
 }
 
@@ -56,10 +60,10 @@ p {
 }
 
 .CoralColor-start {
-  background-color: #603f83ff;
+  background-color: var(--first-color);
 }
 .CoralColor {
-  background-color: #c7d3d4ff;
+  background-color: var(--third-color);
   min-height: 1000px;
 }
 
@@ -68,35 +72,36 @@ p {
   border-bottom: 1px solid;
 }
 .check-lblue {
-  border-left: 2px solid #00f7ff;
-  border-right: 2px solid #00f7ff;
+  border-left: 2px solid var(--second-color);
+  border-right: 2px solid var(--second-color);
 }
 
 .check-purple {
-  border-left: 2px solid #603f83ff;
-  border-bottom: 2px solid #603f83ff;
+  border-left: 2px solid var(--first-color);
+  border-bottom: 2px solid var(--first-color);
 }
 .check-purple-light {
-  border-left: 2px solid #6e00ff;
-  border-right: 2px solid #6e00ff;
+  border-left: 2px solid var(--first-color);
+  border-right: 2px solid var(--first-color);
 }
 
 .check-grey {
-  border-left: 2px solid #c7d3d4ff;
-  border-bottom: 2px solid #c7d3d4ff;
+  border-left: 2px solid var(--third-color);
+  border-bottom: 2px solid var(--third-color);
 }
 .check-grey-r {
-  border-top: 2px solid #c7d3d4ff;
-  border-right: 2px solid #c7d3d4ff;
+  border-top: 2px solid var(--third-color);
+  border-right: 2px solid var(--third-color);
 }
 .check-purple-r {
-  border-top: 2px solid #6e00ff;
-  border-right: 2px solid #6e00ff;
+  border-top: 2px solid var(--first-color);
+  border-right: 2px solid var(--first-color);
 }
 
 .card-bg {
-  color: white;
-  background-color: #603f83ff;
+  color: #473f4e;
+  font-weight: bold;
+  background-color: var(--first-color);
 }
 
 .background {
@@ -108,23 +113,23 @@ p {
   /* Needed to position the navbar */
   position: relative;
   min-height: 700px;
-  background-color: #603f83ff;
+  background-color: var(--first-color);
 }
 
 .circle {
   --hue-color: 250;
-  background-color: #c7d3d4ff;
+  background-color: var(--third-color);
   border-radius: 50%;
   width: 400px;
   height: 400px;
 }
 
 .Name-border {
-  border: 3px solid #afeadc;
+  border: 3px solid var(--second-color);
 }
 .Name-border-1 {
   color: white;
-  border: 3px solid #6e00ff;
+  border: 3px solid var(--first-color);
 }
 
 .footer {
@@ -168,20 +173,21 @@ p {
 }
 
 .text-lblue {
-  color: #00f7ff;
+  color: var(--second-color);
 }
 
 .text-purpl {
-  color: #6e00ff;
+  color: var(--first-color);
+  font-weight: bold;
 }
 
 .card-background {
-  background-color: #c7d3d4ff !important;
-  border: 1px solid #c7d3d4ff !important;
+  background-color: var(--third-color) !important;
+  border: 1px solid var(--third-color) !important;
 }
 .card-background-image {
-  border-bottom: 2px solid #00f7ff !important;
-  border-left: 2px solid #00f7ff !important;
+  border-bottom: 2px solid var(--second-color) !important;
+  border-left: 2px solid var(--second-color) !important;
 }
 
 .title {
