@@ -163,7 +163,7 @@ section {
 }
 
 .featured-desc {
-  color: #cee9f1;
+  color: #d5e0e4;
 }
 
 .projects {
@@ -320,6 +320,7 @@ section {
   }
   .featured .projects-inner,
   .projects-container .projects-inner {
+    text-align: left;
     padding-right: 1.5em;
     display: -ms-grid;
     display: grid;
@@ -385,14 +386,19 @@ section {
     text-align: left;
   }
   .hero .homepage-img {
-    margin-top: 35%;
-    margin-left: -25%;
+    padding: 2em 2em 2em 0em;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    place-content: center;
   }
   .hero .homepage-img img {
-    width: 70%;
+    width: 100%;
   }
   .hero .content {
-    padding: 3em 4em 5em 4em;
+    padding: 3em 4em 10em 4em;
     place-content: center;
   }
   .hero .content h1 {
@@ -406,7 +412,6 @@ section {
     max-width: 500px;
     float: right;
     place-content: center;
-    width: 26em;
   }
   .hero {
     position: relative;
@@ -428,9 +433,6 @@ section {
   .contacts-section .contact-section h1 {
     padding-bottom: 1em;
   }
-  .contacts-section h1 {
-    text-align: left;
-  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -439,16 +441,92 @@ section {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .contact-section {
+    display: block;
+  }
+}
+
 @media only screen and (min-width: 1250px) {
   section {
-    padding: 10em 10em 10em 10em;
+    padding: 6em 10em 6em 10em;
   }
   .hero:before {
     left: 18%;
   }
   .hero .content {
-    font-size: 1.4em;
     padding: 6em 8em 6em 10em;
+  }
+  .hero .content h1 {
+    font-size: 4em;
+  }
+  .about-description {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+  .projects-container {
+    -ms-grid-columns: 40% auto;
+        grid-template-columns: 40% auto;
+  }
+  .contact-section {
+    display: -ms-grid;
+    display: grid;
+  }
+  .contacts-section .contact-section h1 {
+    padding-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 1332px) {
+  .contacts-section .contact-section h1 {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1370px) {
+  .contact-section {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  section {
+    padding: 10em 20em 10em 20em;
+  }
+  .hero:before {
+    left: 22%;
+  }
+  .hero .content {
+    padding: 9em 10em 9em 20em;
+  }
+  .hero .content h1 {
+    font-size: 4em;
+  }
+  .about-description {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+  .left .inner img {
+    width: 26em;
+  }
+  .contact-section {
+    display: -ms-grid;
+    display: grid;
+  }
+  .contacts-section .contact-section h1 {
+    padding-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 1652px) {
+  .contacts-section .contact-section h1 {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .contact-section {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -128,7 +128,7 @@ section {
   font-weight: bold;
 }
 .featured-desc {
-  color: #cee9f1;
+  color: #d5e0e4;
 }
 
 .projects {
@@ -258,6 +258,7 @@ section {
     display: grid;
     grid-template-columns: 50% auto;
     .projects-inner {
+      text-align: left;
       padding-right: 1.5em;
       display: grid;
       place-content: center;
@@ -317,14 +318,16 @@ section {
     padding: 0;
     text-align: left;
     .homepage-img {
-      margin-top: 35%;
-      margin-left: -25%;
+      padding: 2em 2em 2em 0em;
+      display: grid;
+      justify-content: center;
+      place-content: center;
       img {
-        width: 70%;
+        width: 100%;
       }
     }
     .content {
-      padding: 3em 4em 5em 4em;
+      padding: 3em 4em 10em 4em;
       place-content: center;
       h1 {
         font-size: 3em;
@@ -342,7 +345,6 @@ section {
       max-width: 500px;
       float: right;
       place-content: center;
-      width: 26em;
     }
   }
 
@@ -365,9 +367,6 @@ section {
     .contact-section h1 {
       padding-bottom: 1em;
     }
-    h1 {
-      text-align: left;
-    }
   }
 }
 
@@ -376,16 +375,88 @@ section {
     padding: 0;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .contact-section {
+    display: block;
+  }
+}
 @media only screen and (min-width: 1250px) {
   section {
-    padding: 10em 10em 10em 10em;
+    padding: 6em 10em 6em 10em;
   }
   .hero:before {
     left: 18%;
   }
 
   .hero .content {
-    font-size: 1.4em;
     padding: 6em 8em 6em 10em;
+    h1 {
+      font-size: 4em;
+    }
+  }
+
+  .about-description {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
+  .projects-container {
+    grid-template-columns: 40% auto;
+  }
+  .contact-section {
+    display: grid;
+  }
+  .contacts-section .contact-section h1 {
+    padding-bottom: 1em;
+  }
+}
+@media only screen and (min-width: 1332px) {
+  .contacts-section .contact-section h1 {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1370px) {
+  .contact-section {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1550px) {
+  section {
+    padding: 10em 20em 10em 20em;
+  }
+  .hero:before {
+    left: 22%;
+  }
+
+  .hero .content {
+    padding: 9em 10em 9em 20em;
+
+    h1 {
+      font-size: 4em;
+    }
+  }
+
+  .about-description {
+    font-size: 1.2em;
+    line-height: 1.6em;
+  }
+  .left .inner img {
+    width: 26em;
+  }
+  .contact-section {
+    display: grid;
+  }
+  .contacts-section .contact-section h1 {
+    padding-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 1652px) {
+  .contacts-section .contact-section h1 {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .contact-section {
+    display: block;
   }
 }
