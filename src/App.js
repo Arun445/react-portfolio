@@ -4,15 +4,29 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import NavBarCss from "./components/NavBarCss";
+import About from "./components/About";
+import ProjectsCss from "./components/ProjectsCss";
+import HomePage from "./components/HomePage";
+import ContactsCss from "./components/ContactsCss";
+import FooterCss from "./components/FooterCss";
+/*
+<NavBar />
+<Home />
+<Projects />
+<Contact />
+<Footer />
+*/
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <Home />
-      <Projects />
-      <Contact />
-      <Footer />
+      <NavBarCss />
+      <HomePage />
+      <About />
+      <ProjectsCss />
+      <ContactsCss />
+      <FooterCss />
     </div>
   );
 }

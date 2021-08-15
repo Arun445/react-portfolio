@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,700&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.nav-container {
+  background-color: #6aa0af;
+
+  a {
+    color: white;
+  }
+  a:hover {
+    opacity: 50%;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+
+  ul {
+    display: flex;
+    a {
+      display: block;
+      padding: 0 1em;
+    }
+  }
+}
+
+.hero {
+  background-color: #6aa0af;
+  color: white;
+  display: grid;
+  text-align: center;
+  padding: 2em 0 4em;
+  z-index: 2;
+  .content {
+    display: grid;
+
+    padding-bottom: 3em;
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+  .meet {
+    color: #f5debf;
+    font-size: 1.5em;
+  }
+  .homepage-img {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 23em;
+    }
+  }
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+/*------------------------ABOUT SECTION------------------------*/
+.left {
+  display: grid;
+  place-content: center;
+  .inner {
+    display: grid;
+    justify-content: center;
+    padding-right: 1em;
+    img {
+      width: 15em;
+    }
+  }
+}
+
+.about-description {
+  padding: 2em 0 1em 0;
+}
+.about-stack {
+  background: #d9d6d3;
+  border-radius: 0.5em;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  .icon-container {
+    display: flex;
+    height: 1em;
+    font-size: 2.5em;
+    i {
+      padding: 0 0.5em;
+    }
+    img {
+      padding: 0 0.3em;
+    }
+  }
+}
+/*------------------------PROJECTS SECTION------------------------*/
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  color: #f5debf;
+  margin: 0;
+}
+.featured-title {
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.featured-desc {
+  color: #cee9f1;
+}
+
+.projects {
+  background: #6aa0af;
+}
+
+.projects-container a img {
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+/*------------------------CONTACTS SECTION------------------------*/
+.contacts-container {
+  display: grid;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  ul {
+    li {
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+
+      border-bottom: solid 1px black;
+      i {
+        font-size: 2em;
+        padding: 0 0.3em;
+      }
+      i:hover {
+        opacity: 50%;
+      }
+    }
+  }
+}
+.contact-section {
+  margin-top: 3em;
+  display: grid;
+  justify-content: center;
+  h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+  }
+  .contact-content {
+    border-radius: 0.5em;
+    padding: 1em;
+    display: grid;
+    text-align: left;
+
+    .contact-label {
+      font-size: 1em;
+      color: black;
+      display: grid;
+      padding-bottom: 0.3em;
+    }
+    .contact-input {
+      width: 100%;
+      background-color: #ebebeb;
+      border-radius: 0.5em;
+
+      color: black;
+      font-size: 1em;
+      border: none;
+      outline: none;
+      padding: 1em;
+    }
+  }
+}
+
+.button-flex {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  a:hover {
+    opacity: 90%;
+  }
+  .button {
+    background: #6aa0af;
+    border-radius: 0.5em;
+    padding: 1em;
+    color: white;
+
+    width: 12em;
+  }
+}
+
+/*------------------------FOOTER SECTION------------------------*/
+
+.footer {
+  background-color: #6aa0af;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2em;
+  }
+  &__social {
+    margin-bottom: 2em;
+  }
+  &__icon:hover {
+    color: #5d8b97 !important;
+  }
+  &__icon {
+    font-size: 1.5em;
+    color: #fff;
+    margin: 0 1em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .projects {
+    text-align: left;
+  }
+  .about-stack {
+    padding: 1em;
+  }
+  .about-container {
+    display: grid;
+    place-content: center;
+  }
+  .featured,
+  .projects-container {
+    display: grid;
+    grid-template-columns: 50% auto;
+    .projects-inner {
+      padding-right: 1.5em;
+      display: grid;
+      place-content: center;
+    }
+    .projects-image {
+      display: grid;
+      place-content: center;
+    }
+  }
+
+  .contacts-section {
+    display: grid;
+    grid-template-columns: 50% auto;
+    margin-top: 0em !important;
+
+    .contacts-container {
+      place-content: start;
+      h1 {
+        margin-bottom: 1em;
+      }
+    }
+    .contact-section {
+      margin-top: 0;
+      place-content: center;
+      h1 {
+        margin-bottom: 1.2em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 877px) {
+  .contacts-section .contacts-container h1 {
+    padding-bottom: 1.1em;
+  }
+}
+@media only screen and (min-width: 961px) {
+  .contacts-section .contacts-container h1 {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .nav-container {
+    font-size: 1.4em;
+  }
+  header {
+    padding: 1.5em;
+  }
+  section {
+    padding: 4em;
+  }
+  .hero {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 55% auto;
+    padding: 0;
+    text-align: left;
+    .homepage-img {
+      margin-top: 35%;
+      margin-left: -25%;
+      img {
+        width: 70%;
+      }
+    }
+    .content {
+      padding: 3em 4em 5em 4em;
+      place-content: center;
+      h1 {
+        font-size: 3em;
+        margin-bottom: 1.2em;
+      }
+    }
+  }
+
+  .left .inner img {
+    width: 20em;
+  }
+
+  .projects {
+    img {
+      max-width: 500px;
+      float: right;
+      place-content: center;
+      width: 26em;
+    }
+  }
+
+  .hero {
+    position: relative;
+  }
+  .hero:before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 90vh;
+    background: #568f9f;
+    top: 0;
+    z-index: -1;
+    left: 16%;
+  }
+
+  .contacts-section {
+    grid-template-columns: 40% auto;
+    .contact-section h1 {
+      padding-bottom: 1em;
+    }
+    h1 {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .contacts-section .contact-section h1 {
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  section {
+    padding: 10em 10em 10em 10em;
+  }
+  .hero:before {
+    left: 18%;
+  }
+
+  .hero .content {
+    font-size: 1.4em;
+    padding: 6em 8em 6em 10em;
+  }
+}
