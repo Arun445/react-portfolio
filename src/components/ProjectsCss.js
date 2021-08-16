@@ -1,51 +1,71 @@
-import React from "react";
+import { useRef, useEffect, useState } from "react";
 import logo2 from "../todoapp.png";
+
+import projects from "../projects.js";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 function ProjectsCss() {
+  const [onHover, setOnHover] = useState("");
+  const [h, setH] = useState(0);
+
+  const revealRefs = useRef([]);
+  const currentRefs = (revealRefs.current = []);
+
+  const addToRefs = (ref) => {
+    if (ref && !currentRefs.includes(ref)) {
+      currentRefs.push(ref);
+    }
+  };
+
+  useEffect(() => {
+    console.log("ayy");
+    if (h === 0) {
+      setH(1);
+      currentRefs.forEach((ref, index) => {
+        gsap.fromTo(
+          ref,
+          { autoAlpha: 0 },
+          {
+            duration: 1,
+            autoAlpha: 1,
+            ease: 0,
+            scrollTrigger: {
+              id: `section-${index + 1}`,
+              trigger: ref,
+              start: "top center +=100",
+              toggleActions: "play none none",
+            },
+          }
+        );
+      });
+    }
+  });
+
+  const changeImageOnHover = (title) => {
+    setOnHover(title);
+    console.log("a");
+  };
   return (
-    <div>
+    <div id="Projects">
       <section className="projects">
-        <div className="projects-container">
-          <div className="projects-inner">
-            <p className="subtitle">TODO APP</p>
-            <p className="featured-title">to-do-app-heroku.com</p>
-            <p className="featured-desc">
-              Nulla ullamco sint cillum labore aliqua exercitation magna
-              consectetur ut.
-            </p>
-          </div>
+        {projects.map(({ title, subtitle, cardText, image }) => (
+          <div className="projects-container" ref={addToRefs} key={title}>
+            <div className="projects-inner">
+              <p className="subtitle">{title}</p>
+              <p className="featured-title">{subtitle}</p>
+              <p className="featured-desc">{cardText}</p>
+            </div>
 
-          <a href="#">
-            <img src={logo2}></img>
-          </a>
-        </div>
-        <div className="projects-container">
-          <div className="projects-inner">
-            <p className="subtitle">todo app</p>
-            <p className="featured-title">to-do-app-heroku.com</p>
-            <p className="featured-desc">
-              Lorem mollit sunt commodo anim duis culpa proident voluptate magna
-              mollit.
-            </p>
+            <a href="#">
+              <img
+                onMouseOver={() => changeImageOnHover(title)}
+                src={image}
+              ></img>
+            </a>
           </div>
-
-          <a href="#">
-            <img src={logo2}></img>
-          </a>
-        </div>
-        <div className="projects-container">
-          <div className="projects-inner">
-            <p className="subtitle">todo app</p>
-            <p className="featured-title">to-do-app-heroku.com</p>
-            <p className="featured-desc">
-              Qui culpa consectetur non sit excepteur sit aute deserunt commodo
-              reprehenderit.
-            </p>
-          </div>
-
-          <a href="#">
-            <img src={logo2}></img>
-          </a>
-        </div>
+        ))}
       </section>
     </div>
   );

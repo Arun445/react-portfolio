@@ -8,10 +8,10 @@ function ContactsCss() {
           <h1>Contact me directly</h1>
           <ul>
             <li>
-              <strong>Email</strong>: arunas.martinaitis2@gmail.com
+              <strong>Email : </strong> <p>arunas.martinaitis2@gmail.com</p>
             </li>
             <li>
-              <strong>LinkedIn</strong>:{" "}
+              <strong>LinkedIn : </strong>{" "}
               <a
                 href={"https://linkedin.com/in/arunas-martinaitis-28005120a"}
                 target="_blank"
@@ -24,7 +24,7 @@ function ContactsCss() {
               </a>
             </li>
             <li>
-              <strong>GitHub</strong>:{" "}
+              <strong>GitHub : </strong>{" "}
               <a
                 href={"https://github.com/Arun445"}
                 target="_blank"
@@ -37,7 +37,7 @@ function ContactsCss() {
               </a>
             </li>
             <li>
-              <strong>Resume</strong>:{" "}
+              <strong>Resume : </strong>{" "}
               <a
                 href={"https://github.com/Arun445"}
                 target="_blank"
