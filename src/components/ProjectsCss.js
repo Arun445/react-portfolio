@@ -20,7 +20,6 @@ function ProjectsCss() {
   };
 
   useEffect(() => {
-    console.log("ayy");
     if (h === 0) {
       setH(1);
       currentRefs.forEach((ref, index) => {
@@ -58,12 +57,44 @@ function ProjectsCss() {
               <p className="featured-desc">{cardText}</p>
             </div>
 
-            <a href="#">
-              <img
+            <div className="image-container">
+              <div
+                className="image-content"
                 onMouseOver={() => changeImageOnHover(title)}
-                src={image}
-              ></img>
-            </a>
+                onMouseOut={(e) => console.log(e.target)}
+              >
+                {onHover === title ? (
+                  <div>
+                    <img src={image} className="onHoverBlur" />
+                    <a
+                      href={"https://github.com/Arun445"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="first-txt"
+                      onMouseOver={() => changeImageOnHover(title)}
+                    >
+                      <i
+                        className="fab fa-github fa-2x"
+                        style={{ color: "white" }}
+                      ></i>
+                    </a>
+                    <a
+                      href={"https://github.com/Arun445"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="second-txt"
+                    >
+                      <i
+                        className="fas fa-globe-europe fa-2x"
+                        style={{ color: "white" }}
+                      ></i>
+                    </a>
+                  </div>
+                ) : (
+                  <img src={image} />
+                )}
+              </div>
+            </div>
           </div>
         ))}
       </section>

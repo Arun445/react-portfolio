@@ -19,6 +19,7 @@ import BlockDesign from "./components/BlockDesign";
 <Footer />
 
 <NavBarCss />
+      <BlockDesign />
       <HomePage />
       <About />
       <ProjectsCss />

@@ -83,14 +83,13 @@ function Projects() {
               </Card>
             </Col>
             <Col xm={10} md={6} lg={12} xl={6} className="p-1 ">
-              <Card className="" onMouseOver={() => changeImageOnHover(title)}>
+              <div
+                className="rel"
+                onMouseOver={() => changeImageOnHover(title)}
+              >
                 {onHover === title ? (
                   <div>
-                    <Card.Img
-                      variant="top"
-                      src={image}
-                      className="onHoverBlur"
-                    />
+                    <img variant="top" src={image} className="onHoverBlur" />
                     <a
                       href={"https://github.com/Arun445"}
                       target="_blank"
@@ -117,7 +116,7 @@ function Projects() {
                 ) : (
                   <Card.Img variant="top" src={image} />
                 )}
-              </Card>
+              </div>
             </Col>
           </Row>
         ))}
