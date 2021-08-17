@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from "react";
-import logo2 from "../todoapp.png";
 
 import projects from "../projects.js";
 import { gsap } from "gsap";
@@ -8,7 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 function ProjectsCss() {
   const [onHover, setOnHover] = useState("");
-  const [h, setH] = useState(0);
+  const [times, setTimes] = useState(0);
+
+  const imageRef = useRef(null);
 
   const revealRefs = useRef([]);
   const currentRefs = (revealRefs.current = []);
@@ -18,10 +19,21 @@ function ProjectsCss() {
       currentRefs.push(ref);
     }
   };
-
   useEffect(() => {
-    if (h === 0) {
-      setH(1);
+    if (onHover) {
+      gsap.fromTo(
+        imageRef.current,
+        { filter: "blur(0px) brightness(1)" },
+        {
+          duration: 0.3,
+          filter: "blur(3px) brightness(0.5)",
+          delay: 0.1,
+        }
+      );
+    }
+
+    if (times === 0) {
+      setTimes(1);
       currentRefs.forEach((ref, index) => {
         gsap.fromTo(
           ref,
@@ -40,63 +52,74 @@ function ProjectsCss() {
         );
       });
     }
-  });
+  }, [onHover]);
 
-  const changeImageOnHover = (title) => {
-    setOnHover(title);
-    console.log("a");
+  const changeImageOnHover = (id = "") => {
+    if (id) {
+      setOnHover(id);
+    } else {
+      setOnHover("");
+    }
   };
   return (
     <div id="Projects">
-      <section className="projects">
-        {projects.map(({ title, subtitle, cardText, image }) => (
-          <div className="projects-container" ref={addToRefs} key={title}>
-            <div className="projects-inner">
-              <p className="subtitle">{title}</p>
-              <p className="featured-title">{subtitle}</p>
-              <p className="featured-desc">{cardText}</p>
-            </div>
+      <section
+        className="projects"
+        onMouseOver={(e) => {
+          changeImageOnHover(e.target.id);
+        }}
+      >
+        {projects.map(
+          ({ id, title, subtitle, cardText, image, website, github }) => (
+            <div className="projects-container" ref={addToRefs} key={title}>
+              <div className="projects-inner">
+                <p className="subtitle">{title}</p>
+                <a href={website}>
+                  <p className="featured-title">{subtitle}</p>
+                </a>
+                <p className="featured-desc">{cardText}</p>
+              </div>
 
-            <div className="image-container">
-              <div
-                className="image-content"
-                onMouseOver={() => changeImageOnHover(title)}
-                onMouseOut={(e) => console.log(e.target)}
-              >
-                {onHover === title ? (
-                  <div>
-                    <img src={image} className="onHoverBlur" />
-                    <a
-                      href={"https://github.com/Arun445"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="first-txt"
-                      onMouseOver={() => changeImageOnHover(title)}
-                    >
-                      <i
-                        className="fab fa-github fa-2x"
-                        style={{ color: "white" }}
-                      ></i>
-                    </a>
-                    <a
-                      href={"https://github.com/Arun445"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="second-txt"
-                    >
-                      <i
-                        className="fas fa-globe-europe fa-2x"
-                        style={{ color: "white" }}
-                      ></i>
-                    </a>
-                  </div>
-                ) : (
-                  <img src={image} />
-                )}
+              <div className="image-container">
+                <div className="image-content">
+                  {Number(onHover) === id ? (
+                    <div>
+                      <img src={image} className="" id={id} ref={imageRef} />
+                      <a
+                        id={id}
+                        href={github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="first-txt"
+                      >
+                        <i
+                          id={id}
+                          className="fab fa-github fa-2x"
+                          style={{ color: "white" }}
+                        ></i>
+                      </a>
+                      <a
+                        id={id}
+                        href={website}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="second-txt"
+                      >
+                        <i
+                          id={id}
+                          className="fas fa-globe-europe fa-2x"
+                          style={{ color: "white" }}
+                        ></i>
+                      </a>
+                    </div>
+                  ) : (
+                    <img src={image} id={id} />
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </section>
     </div>
   );

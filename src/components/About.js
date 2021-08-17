@@ -1,6 +1,4 @@
 import { useRef, useEffect } from "react";
-import logo2 from "../36659662.jpg";
-import logo3 from "../Group 13.svg";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -29,20 +27,22 @@ function About() {
       <section className="featured">
         <div className="left">
           <div ref={headerRef} className="inner">
-            <img className="about-img" src={logo2}></img>
+            <img className="about-img" src={"/images/1.jpg"}></img>
           </div>
         </div>
         <div className="about-container">
           <p className="about-description">
-            Hi, my name is Arūnas Martinaitis and i am a backend developer. In
-            my projects I mainly use Python-Django framework. Also i have
-            experience working with React-Redux.
+            Hi! My name is Arūnas Martinaitis and I am a backend developer. My
+            projects are mostly written in Python and Django framework. Moreover
+            I have been working with React-Redux. Learning the ways of frontend
+            and UI design. Always trying to find better and more efficient ways
+            to implement my coding and developing skills.
           </p>
           <div className="about-stack">
             <div className="icon-container">
               <i className="fab fa-python one"></i>{" "}
               <i className="fab fa-js-square two"></i>
-              <img className="four" src={logo3} />
+              <img className="four" src={"/images/Group 13.svg"} />
               <i className="fab fa-react three"></i>{" "}
             </div>
           </div>

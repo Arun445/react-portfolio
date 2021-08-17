@@ -146,6 +146,9 @@ section {
 .projects {
   background: #6aa0af;
   z-index: 2;
+  .projects-inner .featured-title:hover {
+    opacity: 70%;
+  }
 }
 
 .projects-container .image-container img {
@@ -159,6 +162,9 @@ section {
   place-content: end;
   .image-content {
     position: relative;
+    a:hover {
+      opacity: 50%;
+    }
   }
 }
 
@@ -228,8 +234,11 @@ section {
   margin-top: 1em;
   display: flex;
   justify-content: center;
-  a:hover {
+  button:hover {
     opacity: 90%;
+  }
+  button {
+    border: none;
   }
   .button {
     background: #6aa0af;
@@ -308,6 +317,42 @@ section {
   left: 35%;
   top: 45%;
   transform: translate(-50%, -50%);
+}
+
+.loader {
+  margin-left: 43.5%;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #568f9f;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.success {
+  background: #d1e7dd;
+  border: 1px solid #badbcc;
+  color: #0f5132;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0 2em;
+}
+.danger {
+  background: #f8d7da;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0 2em;
 }
 
 @media only screen and (min-width: 800px) {
@@ -494,6 +539,9 @@ section {
   .contact-section {
     display: block;
   }
+  .loader {
+    margin-left: 45%;
+  }
 }
 @media only screen and (min-width: 1250px) {
   section {
@@ -545,6 +593,10 @@ section {
     z-index: -1;
     right: 150px;
   }
+
+  .loader {
+    margin-left: 43.5%;
+  }
 }
 @media only screen and (min-width: 1332px) {
   .contacts-section .contact-section {
@@ -559,6 +611,9 @@ section {
 @media only screen and (min-width: 1370px) {
   .contact-section {
     display: block;
+  }
+  .loader {
+    margin-left: 46%;
   }
 }
 @media only screen and (min-width: 1550px) {
@@ -605,6 +660,9 @@ section {
   .contacts-section .contacts-container li {
     padding: 1.6em 0em;
   }
+  .loader {
+    margin-left: 43.5%;
+  }
 }
 
 @media only screen and (min-width: 1652px) {
@@ -618,5 +676,8 @@ section {
 @media only screen and (min-width: 1700px) {
   .contact-section {
     display: block;
+  }
+  .loader {
+    margin-left: 46%;
   }
 }

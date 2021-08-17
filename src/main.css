@@ -187,6 +187,10 @@ section {
   z-index: 2;
 }
 
+.projects .projects-inner .featured-title:hover {
+  opacity: 70%;
+}
+
 .projects-container .image-container img {
   border-radius: 1em;
   margin-bottom: 2em;
@@ -201,6 +205,10 @@ section {
 
 .projects-container .image-container .image-content {
   position: relative;
+}
+
+.projects-container .image-container .image-content a:hover {
+  opacity: 50%;
 }
 
 /*------------------------CONTACTS SECTION------------------------*/
@@ -292,8 +300,12 @@ section {
           justify-content: center;
 }
 
-.button-flex a:hover {
+.button-flex button:hover {
   opacity: 90%;
+}
+
+.button-flex button {
+  border: none;
 }
 
 .button-flex .button {
@@ -390,6 +402,57 @@ section {
   top: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.loader {
+  margin-left: 43.5%;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #568f9f;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.success {
+  background: #d1e7dd;
+  border: 1px solid #badbcc;
+  color: #0f5132;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0 2em;
+}
+
+.danger {
+  background: #f8d7da;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0 2em;
 }
 
 @media only screen and (min-width: 800px) {
@@ -592,6 +655,9 @@ section {
   .contact-section {
     display: block;
   }
+  .loader {
+    margin-left: 45%;
+  }
 }
 
 @media only screen and (min-width: 1250px) {
@@ -644,6 +710,9 @@ section {
     z-index: -1;
     right: 150px;
   }
+  .loader {
+    margin-left: 43.5%;
+  }
 }
 
 @media only screen and (min-width: 1332px) {
@@ -658,6 +727,9 @@ section {
 @media only screen and (min-width: 1370px) {
   .contact-section {
     display: block;
+  }
+  .loader {
+    margin-left: 46%;
   }
 }
 
@@ -702,6 +774,9 @@ section {
   .contacts-section .contacts-container li {
     padding: 1.6em 0em;
   }
+  .loader {
+    margin-left: 43.5%;
+  }
 }
 
 @media only screen and (min-width: 1652px) {
@@ -716,6 +791,9 @@ section {
 @media only screen and (min-width: 1700px) {
   .contact-section {
     display: block;
+  }
+  .loader {
+    margin-left: 46%;
   }
 }
 /*# sourceMappingURL=main.css.map */

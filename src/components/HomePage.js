@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import logo from "../loptop.png";
 import { gsap } from "gsap";
 
 function HomePage() {
@@ -39,7 +38,7 @@ function HomePage() {
         </div>
       </div>
       <div className="homepage-img">
-        <img src={logo} ref={imageRef}></img>
+        <img src={"/images/loptop.png"} ref={imageRef}></img>
       </div>
     </div>
   );
