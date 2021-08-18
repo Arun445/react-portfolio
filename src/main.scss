@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -30,7 +34,7 @@ img {
     color: white;
   }
   a:hover {
-    opacity: 50%;
+    opacity: 0.5;
   }
 }
 .nav-scroller {
@@ -49,13 +53,13 @@ header {
     }
   }
 }
-.hero-try {
+.pre-homepage {
   height: 0px;
   .svg-block {
     display: none;
   }
 }
-.hero {
+.homepage {
   background-color: #6aa0af;
   color: white;
   display: grid;
@@ -80,7 +84,7 @@ header {
     display: flex;
     justify-content: center;
     img {
-      width: 23em;
+      width: 20em;
     }
   }
 }
@@ -121,7 +125,7 @@ section {
       padding: 0 0.5em;
     }
     img {
-      padding: 0 0.3em;
+      width: 1.9em;
     }
   }
 }
@@ -138,6 +142,7 @@ section {
   color: white;
   font-size: 1.4em;
   font-weight: bold;
+  margin: 0;
 }
 .featured-desc {
   color: #d5e0e4;
@@ -147,7 +152,7 @@ section {
   background: #6aa0af;
   z-index: 2;
   .projects-inner .featured-title:hover {
-    opacity: 70%;
+    opacity: 0.7;
   }
 }
 
@@ -163,7 +168,7 @@ section {
   .image-content {
     position: relative;
     a:hover {
-      opacity: 50%;
+      opacity: 0.5;
     }
   }
 }
@@ -180,7 +185,7 @@ section {
   ul {
     li {
       padding: 1em;
-      display: flex;
+
       justify-content: center;
       p {
         margin: 0;
@@ -191,7 +196,7 @@ section {
         padding: 0 0.3em;
       }
       i:hover {
-        opacity: 50%;
+        opacity: 0.5;
       }
     }
   }
@@ -217,10 +222,10 @@ section {
       padding-bottom: 0.3em;
     }
     .contact-input {
-      width: 100%;
+      width: 91%;
       background-color: #ebebeb;
       border-radius: 0.5em;
-
+      font-family: "Poppins";
       color: black;
       font-size: 1em;
       border: none;
@@ -235,7 +240,7 @@ section {
   display: flex;
   justify-content: center;
   button:hover {
-    opacity: 90%;
+    opacity: 0.9;
   }
   button {
     border: none;
@@ -243,10 +248,15 @@ section {
   .button {
     background: #6aa0af;
     border-radius: 0.5em;
-    padding: 1em;
+    padding: 1.8em;
     color: white;
 
-    width: 12em;
+    width: 15em;
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: 1.3em;
+    }
   }
 }
 
@@ -266,7 +276,7 @@ section {
     margin-bottom: 2em;
   }
   &__icon:hover {
-    color: #5d8b97 !important;
+    opacity: 0.5;
   }
   &__icon {
     font-size: 1.5em;
@@ -354,13 +364,22 @@ section {
   padding: 1em;
   margin: 0 2em;
 }
+@media only screen and (min-width: 500px) {
+  .contacts-container {
+    ul {
+      li {
+        display: flex;
+      }
+    }
+  }
+}
 
 @media only screen and (min-width: 800px) {
   .header {
     padding: 1.6em;
   }
   .nav-scroller {
-    padding: 3.3em 0;
+    padding: 5vh 0;
   }
   .projects {
     text-align: left;
@@ -379,6 +398,7 @@ section {
     .projects-inner {
       text-align: left;
       padding-right: 1.5em;
+      padding-bottom: 2em;
       display: grid;
       place-content: center;
     }
@@ -444,9 +464,9 @@ section {
 
 @media only screen and (min-width: 1100px) {
   .nav-container {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
-  .hero-try {
+  .pre-homepage {
     height: 0px;
     .svg-block {
       display: unset;
@@ -457,7 +477,7 @@ section {
   section {
     padding: 4em;
   }
-  .hero {
+  .homepage {
     height: 90vh;
     display: grid;
     grid-template-columns: 55% auto;
@@ -523,7 +543,7 @@ section {
     height: 150px;
     border-radius: 5%;
     background: #568f9f;
-    opacity: 30%;
+    opacity: 0.3;
     top: 0;
     z-index: -1;
     right: 0;
@@ -542,16 +562,19 @@ section {
   .loader {
     margin-left: 45%;
   }
+  .contact-section .contact-content .contact-input {
+    width: 95%;
+  }
 }
 @media only screen and (min-width: 1250px) {
   section {
     padding: 6em 10em 6em 10em;
   }
-  .hero:before {
+  .homepage:before {
     left: 18%;
   }
 
-  .hero .content {
+  .homepage .content {
     padding: 6em 8em 6em 10em;
     h1 {
       font-size: 4em;
@@ -588,7 +611,7 @@ section {
     height: 150px;
     border-radius: 5%;
     background: #568f9f;
-    opacity: 60%;
+    opacity: 0.6;
     top: 0;
     z-index: -1;
     right: 150px;
@@ -620,11 +643,11 @@ section {
   section {
     padding: 10em 20em 10em 20em;
   }
-  .hero:before {
+  .homepage:before {
     left: 22%;
   }
 
-  .hero .content {
+  .homepage .content {
     padding: 9em 10em 9em 20em;
 
     h1 {

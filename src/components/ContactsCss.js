@@ -46,7 +46,7 @@ function ContactsCss() {
 
   return (
     <div>
-      <section className="contacts-section">
+      <section className="contacts-section" id="Contacts">
         <div className="contacts-container">
           <h1>Contact me directly</h1>
           <ul>
@@ -112,7 +112,6 @@ function ContactsCss() {
                 type="email"
                 className="contact-input"
                 name="email"
-                name="email"
                 required
               />
             </div>
@@ -127,7 +126,7 @@ function ContactsCss() {
             </div>
             <div className="button-flex">
               <button type="submit" className="button">
-                Send Message
+                <p>Send Message</p>
               </button>
             </div>
           </form>

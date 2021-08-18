@@ -25,7 +25,7 @@ import BlockDesign from "./components/BlockDesign";
 
 function App() {
   return (
-    <div>
+    <div id="Home">
       <NavBarCss />
       <BlockDesign />
       <HomePage />

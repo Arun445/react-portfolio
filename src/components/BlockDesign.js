@@ -15,7 +15,7 @@ function BlockDesign() {
     });
   }, [headerRef]);
   return (
-    <div className="hero-try">
+    <div className="pre-homepage">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="282"

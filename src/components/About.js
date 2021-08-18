@@ -23,11 +23,11 @@ function About() {
     });
   }, [headerRef]);
   return (
-    <div>
+    <div id="About">
       <section className="featured">
         <div className="left">
           <div ref={headerRef} className="inner">
-            <img className="about-img" src={"/images/1.jpg"}></img>
+            <img className="about-img" src={"/images/1.jpg"} alt="Arunas"></img>
           </div>
         </div>
         <div className="about-container">
@@ -42,7 +42,7 @@ function About() {
             <div className="icon-container">
               <i className="fab fa-python one"></i>{" "}
               <i className="fab fa-js-square two"></i>
-              <img className="four" src={"/images/Group 13.svg"} />
+              <img className="four" src={"/images/Group 13.svg"} alt="DJ" />
               <i className="fab fa-react three"></i>{" "}
             </div>
           </div>

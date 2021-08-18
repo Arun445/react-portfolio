@@ -30,7 +30,7 @@ function HomePage() {
   });
 
   return (
-    <div className="hero">
+    <div className="homepage">
       <div className="content">
         <h1 ref={webRef}>Web Development Enthusiast</h1>
         <div className="meet">
@@ -38,7 +38,7 @@ function HomePage() {
         </div>
       </div>
       <div className="homepage-img">
-        <img src={"/images/loptop.png"} ref={imageRef}></img>
+        <img src={"/images/loptop.png"} ref={imageRef} alt="laptop"></img>
       </div>
     </div>
   );

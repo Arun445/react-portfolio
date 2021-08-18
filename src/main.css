@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -31,7 +35,7 @@ img {
 }
 
 .nav-container a:hover {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .nav-scroller {
@@ -60,15 +64,15 @@ header ul a {
   padding: 0 1em;
 }
 
-.hero-try {
+.pre-homepage {
   height: 0px;
 }
 
-.hero-try .svg-block {
+.pre-homepage .svg-block {
   display: none;
 }
 
-.hero {
+.homepage {
   background-color: #6aa0af;
   color: white;
   display: -ms-grid;
@@ -78,22 +82,22 @@ header ul a {
   z-index: 2;
 }
 
-.hero .content {
+.homepage .content {
   display: -ms-grid;
   display: grid;
   padding-bottom: 3em;
 }
 
-.hero .content h1 {
+.homepage .content h1 {
   font-size: 2.5em;
 }
 
-.hero .meet {
+.homepage .meet {
   color: #f5debf;
   font-size: 1.5em;
 }
 
-.hero .homepage-img {
+.homepage .homepage-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,8 +106,8 @@ header ul a {
           justify-content: center;
 }
 
-.hero .homepage-img img {
-  width: 23em;
+.homepage .homepage-img img {
+  width: 20em;
 }
 
 section {
@@ -160,7 +164,7 @@ section {
 }
 
 .about-stack .icon-container img {
-  padding: 0 0.3em;
+  width: 1.9em;
 }
 
 /*------------------------PROJECTS SECTION------------------------*/
@@ -176,6 +180,7 @@ section {
   color: white;
   font-size: 1.4em;
   font-weight: bold;
+  margin: 0;
 }
 
 .featured-desc {
@@ -188,7 +193,7 @@ section {
 }
 
 .projects .projects-inner .featured-title:hover {
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 .projects-container .image-container img {
@@ -208,7 +213,7 @@ section {
 }
 
 .projects-container .image-container .image-content a:hover {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 /*------------------------CONTACTS SECTION------------------------*/
@@ -227,9 +232,6 @@ section {
 
 .contacts-container ul li {
   padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -246,7 +248,7 @@ section {
 }
 
 .contacts-container ul li i:hover {
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .contact-section {
@@ -280,9 +282,10 @@ section {
 }
 
 .contact-section .contact-content .contact-input {
-  width: 100%;
+  width: 91%;
   background-color: #ebebeb;
   border-radius: 0.5em;
+  font-family: "Poppins";
   color: black;
   font-size: 1em;
   border: none;
@@ -301,7 +304,7 @@ section {
 }
 
 .button-flex button:hover {
-  opacity: 90%;
+  opacity: 0.9;
 }
 
 .button-flex button {
@@ -311,9 +314,15 @@ section {
 .button-flex .button {
   background: #6aa0af;
   border-radius: 0.5em;
-  padding: 1em;
+  padding: 1.8em;
   color: white;
-  width: 12em;
+  width: 15em;
+}
+
+.button-flex .button p {
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
 }
 
 /*------------------------FOOTER SECTION------------------------*/
@@ -334,7 +343,7 @@ section {
 }
 
 .footer__icon:hover {
-  color: #5d8b97 !important;
+  opacity: 0.5;
 }
 
 .footer__icon {
@@ -455,12 +464,20 @@ section {
   margin: 0 2em;
 }
 
+@media only screen and (min-width: 500px) {
+  .contacts-container ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .header {
     padding: 1.6em;
   }
   .nav-scroller {
-    padding: 3.3em 0;
+    padding: 5vh 0;
   }
   .projects {
     text-align: left;
@@ -484,6 +501,7 @@ section {
   .projects-container .projects-inner {
     text-align: left;
     padding-right: 1.5em;
+    padding-bottom: 2em;
     display: -ms-grid;
     display: grid;
     place-content: center;
@@ -557,12 +575,12 @@ section {
 
 @media only screen and (min-width: 1100px) {
   .nav-container {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
-  .hero-try {
+  .pre-homepage {
     height: 0px;
   }
-  .hero-try .svg-block {
+  .pre-homepage .svg-block {
     display: unset;
     height: 104vh;
     margin-left: 20%;
@@ -570,7 +588,7 @@ section {
   section {
     padding: 4em;
   }
-  .hero {
+  .homepage {
     height: 90vh;
     display: -ms-grid;
     display: grid;
@@ -579,7 +597,7 @@ section {
     padding: 0;
     text-align: left;
   }
-  .hero .homepage-img {
+  .homepage .homepage-img {
     padding: 2em 2em 2em 0em;
     display: -ms-grid;
     display: grid;
@@ -588,14 +606,14 @@ section {
             justify-content: center;
     place-content: center;
   }
-  .hero .homepage-img img {
+  .homepage .homepage-img img {
     width: 100%;
   }
-  .hero .content {
+  .homepage .content {
     padding: 3em 4em 10em 4em;
     place-content: center;
   }
-  .hero .content h1 {
+  .homepage .content h1 {
     font-size: 3em;
     margin-bottom: 1.2em;
   }
@@ -638,7 +656,7 @@ section {
     height: 150px;
     border-radius: 5%;
     background: #568f9f;
-    opacity: 30%;
+    opacity: 0.3;
     top: 0;
     z-index: -1;
     right: 0;
@@ -658,19 +676,22 @@ section {
   .loader {
     margin-left: 45%;
   }
+  .contact-section .contact-content .contact-input {
+    width: 95%;
+  }
 }
 
 @media only screen and (min-width: 1250px) {
   section {
     padding: 6em 10em 6em 10em;
   }
-  .hero:before {
+  .homepage:before {
     left: 18%;
   }
-  .hero .content {
+  .homepage .content {
     padding: 6em 8em 6em 10em;
   }
-  .hero .content h1 {
+  .homepage .content h1 {
     font-size: 4em;
   }
   .about-description {
@@ -705,7 +726,7 @@ section {
     height: 150px;
     border-radius: 5%;
     background: #568f9f;
-    opacity: 60%;
+    opacity: 0.6;
     top: 0;
     z-index: -1;
     right: 150px;
@@ -737,13 +758,13 @@ section {
   section {
     padding: 10em 20em 10em 20em;
   }
-  .hero:before {
+  .homepage:before {
     left: 22%;
   }
-  .hero .content {
+  .homepage .content {
     padding: 9em 10em 9em 20em;
   }
-  .hero .content h1 {
+  .homepage .content h1 {
     font-size: 4em;
   }
   .about-description {

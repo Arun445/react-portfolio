@@ -52,7 +52,7 @@ function ProjectsCss() {
         );
       });
     }
-  }, [onHover]);
+  }, [onHover, times]);
 
   const changeImageOnHover = (id = "") => {
     if (id) {
@@ -74,7 +74,7 @@ function ProjectsCss() {
             <div className="projects-container" ref={addToRefs} key={title}>
               <div className="projects-inner">
                 <p className="subtitle">{title}</p>
-                <a href={website}>
+                <a href={website} target="_blank" rel="noreferrer">
                   <p className="featured-title">{subtitle}</p>
                 </a>
                 <p className="featured-desc">{cardText}</p>
@@ -84,7 +84,13 @@ function ProjectsCss() {
                 <div className="image-content">
                   {Number(onHover) === id ? (
                     <div>
-                      <img src={image} className="" id={id} ref={imageRef} />
+                      <img
+                        src={image}
+                        className=""
+                        id={id}
+                        ref={imageRef}
+                        alt={title}
+                      />
                       <a
                         id={id}
                         href={github}
@@ -113,7 +119,7 @@ function ProjectsCss() {
                       </a>
                     </div>
                   ) : (
-                    <img src={image} id={id} />
+                    <img src={image} id={id} alt={title} />
                   )}
                 </div>
               </div>

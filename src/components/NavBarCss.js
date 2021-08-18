@@ -10,7 +10,6 @@ function NavBarCss() {
       window.addEventListener("scroll", () => {
         let scrollTop = window.scrollY;
         if (scrollTop === lastScrollTops) {
-          console.log("a");
           autohideToggled.classList.remove("scrolled-up");
           autohideToggled.classList.add("scrolled-top");
         } else if (scrollTop < lastScrollTop) {
@@ -36,16 +35,16 @@ function NavBarCss() {
             <nav>
               <ul>
                 <li>
-                  <a href="#home">Home</a>
+                  <a href={"#Home"}>Home</a>
                 </li>
                 <li>
-                  <a href="#home">About</a>
+                  <a href="#About">About</a>
                 </li>
                 <li>
-                  <a href="#home">Projects</a>
+                  <a href="#Projects">Projects</a>
                 </li>
                 <li>
-                  <a href="#home">Contacts</a>
+                  <a href="#Contacts">Contacts</a>
                 </li>
               </ul>
             </nav>
