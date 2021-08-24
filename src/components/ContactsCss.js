@@ -51,12 +51,14 @@ function ContactsCss() {
           <h1>Contact me directly</h1>
           <ul>
             <li>
-              <strong>Email : </strong> <p>arunas.martinaitis2@gmail.com</p>
+              <strong>Email : </strong> <p>arunas.martinaitis1@gmail.com</p>
             </li>
             <li>
               <strong>LinkedIn : </strong>{" "}
               <a
-                href={"https://linkedin.com/in/arunas-martinaitis-28005120a"}
+                href={
+                  "https://www.linkedin.com/in/ar%C5%ABnas-martinaitis-28005120a/"
+                }
                 target="_blank"
                 rel="noreferrer"
               >
@@ -82,9 +84,12 @@ function ContactsCss() {
             <li>
               <strong>Resume : </strong>{" "}
               <a
-                href={"https://github.com/Arun445"}
+                href={
+                  "https://s3.eu-west-2.amazonaws.com/www.arunasmartinaitis.website/Arunas+Martinaitis.pdf"
+                }
                 target="_blank"
                 rel="noreferrer"
+                download
               >
                 <i className="far fa-file fa-lg" style={{ color: "black" }}></i>
               </a>

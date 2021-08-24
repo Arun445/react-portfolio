@@ -15,7 +15,9 @@ function FooterCss() {
             <i className="fab fa-github fa-lg"></i>
           </a>
           <a
-            href={"https://linkedin.com/in/arunas-martinaitis-28005120a"}
+            href={
+              "https://www.linkedin.com/in/ar%C5%ABnas-martinaitis-28005120a/"
+            }
             target="_blank"
             className="footer__icon"
             rel="noreferrer"
